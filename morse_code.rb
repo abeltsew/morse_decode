@@ -43,3 +43,14 @@ def decode_word(word)
 end
 
 puts decode_word('-- -.--')
+
+def decode(string)
+  splited_string = string.split('   ')
+  message = ''
+  splited_string.each do |word|
+    message += "#{decode_word(word)} "
+  end
+  message.upcase
+end
+puts decode('-- -.--   -. .- -- .')
+puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
